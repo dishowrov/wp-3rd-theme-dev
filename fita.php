@@ -26,8 +26,16 @@ get_header();
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="fh5co-intro animate-box">
-                                <h2>Launcher Launching Soon!</h2>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+
+                                <!-- Title -->
+                                <h2>
+                                    <?php the_title(); ?>
+                                </h2>
+
+                                <!-- Details -->
+                                <p>
+                                    <?php the_content(); ?>
+                                </p>
                             </div>
                         </div>
 
