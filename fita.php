@@ -1,6 +1,8 @@
+<?php
 /*
 * Template Name: Fita Homepage
 */
+?>
 
 <?php
 get_header();
@@ -65,7 +67,7 @@ get_header();
                 }
                 ?>
             </div>
-            
+
             <div class="col-md-6 fh5co-copyright">
                 <?php
                 if (is_active_sidebar("footer-right")) {
