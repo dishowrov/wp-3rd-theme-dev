@@ -6,7 +6,6 @@
 
 <?php
 the_post();
-
 get_header();
 ?>
 <body>
@@ -64,16 +63,16 @@ get_header();
         <div class="row">
             <div class="col-md-6">
                 <?php
-                if (is_active_sidebar("footer-left")) {
-                    dynamic_sidebar("footer-left");
+                if (is_active_sidebar("fita-footer-left")) {
+                    dynamic_sidebar("fita-footer-left");
                 }
                 ?>
             </div>
 
             <div class="col-md-6 fh5co-copyright">
                 <?php
-                if (is_active_sidebar("footer-right")) {
-                    dynamic_sidebar("footer-right");
+                if (is_active_sidebar("fita-footer-right")) {
+                    dynamic_sidebar("fita-footer-right");
                 }
                 ?>
             </div>

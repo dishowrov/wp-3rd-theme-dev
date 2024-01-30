@@ -31,7 +31,7 @@ function fita_sidebars()
     register_sidebar(
         array(
             'name' => __('Footer Left', 'fita'),
-            'id' => 'footer-left',
+            'id' => 'fita-footer-left',
             'description' => __('Footer left widget', 'fita'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget' => '</section>',
@@ -43,7 +43,7 @@ function fita_sidebars()
     register_sidebar(
         array(
             'name' => __('Footer Right', 'fita'),
-            'id' => 'footer-right',
+            'id' => 'fita-footer-right',
             'description' => __('Footer right widget', 'fita'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget' => '</section>',
