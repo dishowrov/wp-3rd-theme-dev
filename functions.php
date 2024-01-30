@@ -15,5 +15,6 @@ function fita_assets()
     wp_enqueue_style("icomoon-css", get_stylesheet_uri("/assets/css/icomoon.css"));
     wp_enqueue_style("bootstrap-css", get_stylesheet_uri("/assets/css/bootstrap.css"));
     wp_enqueue_style("custom-style-css", get_stylesheet_uri("/assets/css/style.css"));
+    wp_enqueue_style("fita", get_stylesheet_uri());
 }
 add_action("wp_enqueue_scripts", "fita_assets");
