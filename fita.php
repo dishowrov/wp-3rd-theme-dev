@@ -8,7 +8,7 @@
 the_post();
 get_header();
 ?>
-<body>
+
 <div class="fh5co-loader"></div>
 
 <aside id="fh5co-aside" role="sidebar" class="text-center" >

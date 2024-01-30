@@ -45,7 +45,7 @@ function fita_sidebars()
             'name' => __('Footer Right', 'fita'),
             'id' => 'fita-footer-right',
             'description' => __('Footer right widget', 'fita'),
-            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'before_widget' => '<section id="%1$s" class="widget %2$s text-right">',
             'after_widget' => '</section>',
             'before_title' => '<h2 class="widget-title>',
             'after_title' => '</h2>'
@@ -53,10 +53,3 @@ function fita_sidebars()
     );
 }
 add_action("widgets_init", "fita_sidebars");
-
-
-// =========================
-
-
-
-
