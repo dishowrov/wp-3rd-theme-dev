@@ -7,4 +7,10 @@ function fita_theme_setup(){
 }
 add_action("after_setup_theme", "fita_theme_setup");
 
+
+function fita_assets() {
+
+}
+add_action("wp_enqueue_scripts", "fita_assets");
+
 ?>
