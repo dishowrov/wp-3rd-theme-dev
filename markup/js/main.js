@@ -1,5 +1,4 @@
 ;(function ($) {
-	
 	'use strict';
 
 	var isMobile = {
@@ -22,7 +21,6 @@
 			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 		}
 	};
-
 
 	var contentWayPoint = function() {
 		var i = 0;
@@ -60,13 +58,10 @@
 		} , { offset: '85%' } );
 	};
 
-
-
 	// Loading page
 	var loaderPage = function() {
 		$(".fh5co-loader").fadeOut("slow");
 	};
-
 
 	var screenHeight = function() {
 
@@ -93,9 +88,7 @@
 			day: "30"
 		});
 
-	};
-	
-	
+	};	
 	
 	$(function(){
 		contentWayPoint();
@@ -103,7 +96,5 @@
 		screenHeight();
 		countDown();
 	});
-
-
 
 }(jQuery));
