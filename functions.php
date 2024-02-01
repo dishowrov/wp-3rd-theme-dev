@@ -53,3 +53,21 @@ function fita_sidebars()
     );
 }
 add_action("widgets_init", "fita_sidebars");
+
+function fita_styles()
+{
+    if (is_page()) {
+
+        $thumbnail_url = get_the_post_thumbnail_url(null, "large");
+?>
+
+        <style>
+            .hero-bg {
+                background-image: url(<?php echo $thumbnail_url; ?>);
+            }
+        </style>
+
+<?php
+    }
+}
+add_action("wp_head", "fita_styles");
