@@ -11,7 +11,7 @@ get_header();
 
 <div class="fh5co-loader"></div>
 
-<aside id="fh5co-aside" role="sidebar" class="text-center" >
+<aside id="fh5co-aside" role="sidebar" class="text-center hero-bg" >
     <h1 id="fh5co-logo">
         <a href="<?php echo site_url(); ?>">
             <?php bloginfo("name"); ?>
