@@ -89,8 +89,8 @@
 
 		simplyCountdown('.simply-countdown-one', {
 			year: "2024",
-			month: "05",
-			day: "30"
+			month: "04",
+			day: "15"
 		});
 
 	};
