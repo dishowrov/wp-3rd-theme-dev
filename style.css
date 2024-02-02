@@ -10,3 +10,23 @@ License URI: http://www.gnu.org/license/gpl-2.0.html
 Tags: blog, education, news
 Text Domain: fita
 */
+
+.fh5co-logo {
+    width: 97%;
+    width: 25%;
+    background-color: cyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11%;
+    -webkit-border-radius: 11%;
+    -moz-border-radius: 11%;
+    -ms-border-radius: 11%;
+    -o-border-radius: 11%;
+}
+
+.fh5co-logo a {
+    font-size: 45px;
+    color: aliceblue;
+    background-color: gray;
+}
