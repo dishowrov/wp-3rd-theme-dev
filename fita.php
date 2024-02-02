@@ -7,6 +7,10 @@
 <?php
 the_post();
 get_header();
+
+$form_placeholder = get_post_meta(get_the_ID(), "placeholder" , true);
+$form_button = get_post_meta(get_the_ID(), "button", true);
+$form_hint = get_post_meta(get_the_ID(), "hint", true);
 ?>
 
 <div class="fh5co-loader"></div>
