@@ -24,6 +24,11 @@ function fita_assets()
     wp_enqueue_script("custom-js", get_theme_file_uri("/assets/js/main.js"), array("jquery"), null, true);
 
     // dynamic countdown
+    $fita_year = get_post_meta(get_the_ID(), "year", true);
+    $fita_month = get_post_meta(get_the_ID(), "month", true);
+    $fita_day = get_post_meta(get_the_ID(), "day", true);
+    $fita_hours = get_post_meta(get_the_ID(), "hours", true);
+    $fita_minutes = get_post_meta(get_the_ID(), "minutes", true);
 }
 add_action("wp_enqueue_scripts", "fita_assets");
 
