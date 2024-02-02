@@ -22,6 +22,8 @@ function fita_assets()
     wp_enqueue_script("jquery-waypoints", get_theme_file_uri("/assets/js/jquery.waypoints.min.js"), array("jquery"), null, true);
     wp_enqueue_script("countdown", get_theme_file_uri("/assets/js/simplyCountdown.js"), array("jquery"), null, true);
     wp_enqueue_script("custom-js", get_theme_file_uri("/assets/js/main.js"), array("jquery"), null, true);
+
+    // dynamic countdown
 }
 add_action("wp_enqueue_scripts", "fita_assets");
 
