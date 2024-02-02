@@ -11,9 +11,10 @@ Tags: blog, education, news
 Text Domain: fita
 */
 
-.fh5co-logo {
+#fh5co-logo {
     width: 97%;
     width: 25%;
+    margin: 50% auto;
     background-color: cyan;
     display: flex;
     align-items: center;
@@ -25,7 +26,7 @@ Text Domain: fita
     -o-border-radius: 11%;
 }
 
-.fh5co-logo a {
+#fh5co-logo a {
     font-size: 45px;
     color: aliceblue;
     background-color: gray;
