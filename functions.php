@@ -29,6 +29,12 @@ function fita_assets()
     $fita_day = get_post_meta(get_the_ID(), "day", true);
     $fita_hours = get_post_meta(get_the_ID(), "hours", true);
     $fita_minutes = get_post_meta(get_the_ID(), "minutes", true);
+
+    wp_localize_script("custom-js", "counterData", array (
+        "year" => $fita_year,
+        "month" => $fita_month,
+        "day" => $fita_day
+    ));
 }
 add_action("wp_enqueue_scripts", "fita_assets");
 
