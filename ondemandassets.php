@@ -1,6 +1,5 @@
 <?php
-/**
- * Template Name : Testing On Demand Assets
- */
 
-?>
+/**
+ * Template Name: Testing On Demand Assets
+ */
