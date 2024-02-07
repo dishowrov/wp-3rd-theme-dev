@@ -12,30 +12,40 @@ add_action("after_setup_theme", "fita_setup_theme");
 function fita_assets()
 {
 
-    wp_enqueue_style("animate-css", get_theme_file_uri("/assets/css/animate.css"));
-    wp_enqueue_style("icomoon-css", get_theme_file_uri("/assets/css/icomoon.css"));
-    wp_enqueue_style("bootstrap-css", get_theme_file_uri("/assets/css/bootstrap.css"));
-    wp_enqueue_style("custom-style-css", get_theme_file_uri("/assets/css/style.css"));
-    wp_enqueue_style("fita", get_stylesheet_uri(), null, time());
+    if (is_page(0)) {
+        $fita_template_name = basename(get_page_template());
 
-    wp_enqueue_script("jquery-easing-js", get_theme_file_uri("/assets/js/jquery.easing.1.3.js"), array("jquery"), null, true);
-    wp_enqueue_script("bootstrap-js", get_theme_file_uri("/assets/js/bootstrap.min.js"), array("jquery"), null, true);
-    wp_enqueue_script("jquery-waypoints", get_theme_file_uri("/assets/js/jquery.waypoints.min.js"), array("jquery"), null, true);
-    wp_enqueue_script("countdown", get_theme_file_uri("/assets/js/simplyCountdown.js"), array("jquery"), null, true);
-    wp_enqueue_script("custom-js", get_theme_file_uri("/assets/js/main.js"), array("jquery"), time(), true);
+        if ($fita_template_name == "fita.php") {
+            wp_enqueue_style("animate-css", get_theme_file_uri("/assets/css/animate.css"));
+            wp_enqueue_style("icomoon-css", get_theme_file_uri("/assets/css/icomoon.css"));
+            wp_enqueue_style("bootstrap-css", get_theme_file_uri("/assets/css/bootstrap.css"));
+            wp_enqueue_style("custom-style-css", get_theme_file_uri("/assets/css/style.css"));
+            wp_enqueue_style("fita", get_stylesheet_uri(), null, time());
 
-    // dynamic countdown
-    $fita_year = get_post_meta(get_the_ID(), "year", true);
-    $fita_month = get_post_meta(get_the_ID(), "month", true);
-    $fita_day = get_post_meta(get_the_ID(), "day", true);
-    $fita_hours = get_post_meta(get_the_ID(), "hours", true);
-    $fita_minutes = get_post_meta(get_the_ID(), "minutes", true);
+            wp_enqueue_script("jquery-easing-js", get_theme_file_uri("/assets/js/jquery.easing.1.3.js"), array("jquery"), null, true);
+            wp_enqueue_script("bootstrap-js", get_theme_file_uri("/assets/js/bootstrap.min.js"), array("jquery"), null, true);
+            wp_enqueue_script("jquery-waypoints", get_theme_file_uri("/assets/js/jquery.waypoints.min.js"), array("jquery"), null, true);
+            wp_enqueue_script("countdown", get_theme_file_uri("/assets/js/simplyCountdown.js"), array("jquery"), null, true);
+            wp_enqueue_script("custom-js", get_theme_file_uri("/assets/js/main.js"), array("jquery"), time(), true);
 
-    wp_localize_script("custom-js", "counterData", array(
-        "year" => $fita_year,
-        "month" => $fita_month,
-        "day" => $fita_day
-    ));
+            // dynamic countdown
+            $fita_year = get_post_meta(get_the_ID(), "year", true);
+            $fita_month = get_post_meta(get_the_ID(), "month", true);
+            $fita_day = get_post_meta(get_the_ID(), "day", true);
+            $fita_hours = get_post_meta(get_the_ID(), "hours", true);
+            $fita_minutes = get_post_meta(get_the_ID(), "minutes", true);
+
+            wp_localize_script("custom-js", "counterData", array(
+                "year" => $fita_year,
+                "month" => $fita_month,
+                "day" => $fita_day
+            ));
+        } else {
+            wp_enqueue_style("bootstrap-css", get_theme_file_uri("/assets/css/bootstrap.css"));
+            wp_enqueue_style("custom-style-css", get_theme_file_uri("/assets/css/style.css"));
+            wp_enqueue_style("fita", get_stylesheet_uri(), null, time());
+        }
+    }
 }
 add_action("wp_enqueue_scripts", "fita_assets");
 
