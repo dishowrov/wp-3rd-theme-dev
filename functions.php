@@ -11,8 +11,8 @@ add_action("after_setup_theme", "fita_setup_theme");
 
 function fita_assets()
 {
-echo get_page_template();
-die();
+    echo basename(get_page_template());
+    die();
 
 
     wp_enqueue_style("animate-css", get_theme_file_uri("/assets/css/animate.css"));
@@ -34,7 +34,7 @@ die();
     $fita_hours = get_post_meta(get_the_ID(), "hours", true);
     $fita_minutes = get_post_meta(get_the_ID(), "minutes", true);
 
-    wp_localize_script("custom-js", "counterData", array (
+    wp_localize_script("custom-js", "counterData", array(
         "year" => $fita_year,
         "month" => $fita_month,
         "day" => $fita_day
