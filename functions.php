@@ -12,6 +12,7 @@ add_action("after_setup_theme", "fita_setup_theme");
 function fita_assets()
 {
 echo get_page_template();
+die();
 
 
     wp_enqueue_style("animate-css", get_theme_file_uri("/assets/css/animate.css"));
